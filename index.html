@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="./style.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="sss"><h3 class="p-3">Web Portfolio</h3></div>
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Intro')" id="defaultOpen"><p>Intro</p></button>
+            <button class="tablinks" onclick="openCity(event, 'About')"><p>About Me</p></button>
+            <button class="tablinks" onclick="openCity(event, 'Works')"><p>My Works</p></button>
+        </div>
+        
+        <div id="Intro" class="tabcontent">
+            <h4 class="p-3" style="color: blue;">const
+                <span style="color: #FFDB58;">&nbsp;Intro&nbsp;</span>
+                <span style="color: white;">&nbsp;= {</span>
+            </h4>
+            <div class="ml-5">
+                <h2 class="p-3 typewriter-text" style="color: #FFDB58;">
+                    <span style="color: #34cdf7;">"name":</span> "Joneth Punzalan Rudio"<span style="color: white;">,</span>
+                </h2>
+                <br/>
+                <h2 class="p-3 typewriter-text" style="color: #FFDB58;">
+                    <span style="color: #34cdf7;">"intro":</span> "I'm a student and a new Web Developer"<span style="color: white;">,</span>
+                </h2>
+                <br/>
+                <h2 class="p-3 typewriter-text" style="color: white;">
+                    <span style="color: #34cdf7;">"contacts":</span> [
+                </h2>
+                <br/>
+                <h2 class="ml-5 p-3 typewriter-text">
+                    <span style="color: #34cdf7;">facebook:</span> 
+                    "<a href="https://www.facebook.com/jOn3th19">https://www.facebook.com/jOn3th19</a>"<span style="color: white;">,</span>
+                </h2>
+                <br/>
+                <h2 class="ml-5 p-3 typewriter-text">
+                    <span style="color: #34cdf7;">twitter:</span> 
+                    "<a href="https://twitter.com/jOn3th19">https://twitter.com/jOn3th19</a>"
+                </h2>
+                <br/>
+                <h3 class="p-3 typewriter-text" style="color: white;">]</h3>
+                <br/>
+            </div>
+            <h4 class="p-3 typewriter-text" style="color: white;">};</h4>
+        </div>
+        
+        <div id="About" class="tabcontent">
+            <h3 class="ml-2 typewriter-text" style="color: red;">&#60;?php</h3>
+            <br/>
+            <div class="row ml-4">
+                <h3 class="col-2"><span class="typewriter-text"><span style="color: #34cdf7;">$msg</span><span style="color: white;"> = </span></span></h3>
+                <div class="col-10 typewriter-text">
+                    <h2 style="color: #cc7625;"><span class="typewriter-text">"Hello I'm a student of BS Computer Engineering at the</span>
+                        <br/><span class="typewriter-text">Polytechnic University of the Philippines.</span>
+                        <br/><span class="typewriter-text">I mainly work as a back-end developer in my projects."<span style="color: white;">;</span></span>
+                        
+                    </h2>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row ml-4">
+                <h3 class="col-2" style="color: white;"><span class="typewriter-text"><span style="color: #34cdf7;">$skills</span> = [</span></h3>
+                <div class="col-10">
+                    <br/>
+                    <h2 class=" typewriter-text" style="color: #cc7625;">"Laravel PHP Framework"<span style="color: white;">,</span></h2>
+                    <br/>
+                    <h2 class=" typewriter-text" style="color: #cc7625;">"HTML"<span style="color: white;">,</span></h2>
+                    <br/>
+                    <h2 class=" typewriter-text" style="color: #cc7625;">"Basic Javascript"</h2>
+                    <br/>
+                </div>
+            </div>
+            <h3 class="col-2 ml-4 typewriter-text" style="color: white;">];</h3>
+            <br/>
+            <br>
+            <br>
+            <div class="row ml-4 typewriter-text">
+                <h3 class="col-3" style="color: white;"><span style="color: #34cdf7;">$onProcess</span> = [
+                <span style="color: #cc7625;">"Studying MERN Stack"</span>
+                ];</h3>
+            </div>
+            <h3 class="ml-2 typewriter-text" style="color: red;">?&#62;</h3>
+        </div>
+        
+        <div id="Works" class="tabcontent">
+            <div class="row">
+                <div class="col-6 container justify-center-content">
+                    <img src="eval.png" alt="Evaluation Monitoring System" width="90%" class="p-4">
+                    <img src="fac.png" alt="Facility Management System" width="90%" class="p-4">
+                </div>
+                <div class="col-6 h-50 p-4">
+                    <img src="pd.jpg" alt="Planet Defender" width="50%">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
